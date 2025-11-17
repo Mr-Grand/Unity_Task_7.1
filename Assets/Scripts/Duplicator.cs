@@ -37,7 +37,9 @@ public class Duplicator : MonoBehaviour
             int spawnCount = Random.Range(2, 7);
             for (int i = 0; i < spawnCount; i++)
             {
-                Vector3 randomPosition = Random.insideUnitSphere * 0.3f; // 0.3 просто радиус сферы для удобной генерации кубов
+                Vector3 randomPosition = Random.insideUnitSphere * 0.3f; 
+                if(randomPosition.z < 0)
+                    randomPosition.z = -randomPosition.z;
                 
                 GameObject obj = Instantiate(_cubePrefab, hit.point + randomPosition, Quaternion.identity);
                 CubeBehaviour cubeBehaviour = obj.GetComponent<CubeBehaviour>();

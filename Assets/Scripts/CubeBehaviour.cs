@@ -11,6 +11,5 @@ public class CubeBehaviour : MonoBehaviour
         transform.localScale = newScale;
         _chanceToDuplicate = targetChanceToDuplicate / 2;
         GetComponent<Renderer>().material.color = new Color(Random.value, Random.value, Random.value);
-        
     }
 }
