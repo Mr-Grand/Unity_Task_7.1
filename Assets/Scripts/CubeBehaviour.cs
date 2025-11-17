@@ -2,8 +2,10 @@ using UnityEngine;
 
 public class CubeBehaviour : MonoBehaviour
 {
-    [SerializeField] public float _chanceToDuplicate;
+    [SerializeField] private float _chanceToDuplicate;
     [SerializeField] private float _scaleMultiplier;
+    
+    public float ChanceToDuplicate => _chanceToDuplicate;
     
     public void SetUpCube(Vector3 targetScale, float targetChanceToDuplicate)
     {
